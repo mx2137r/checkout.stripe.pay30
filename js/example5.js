@@ -58,6 +58,33 @@
     ]
   });
   
+  paymentRequest.on("token", function(result) {
+    var example = document.querySelector(".example5");
+    example.querySelector(".token").innerText = result.token.id;
+    example.classList.add("submitted");
+    result.complete("success");
+  });
+
+  var paymentRequestElement = elements.create("paymentRequestButton", {
+    paymentRequest: paymentRequest,
+    style: {
+      paymentRequestButton: {
+        theme: "light"
+      }
+    }
+  });
+
+  paymentRequest.canMakePayment().then(function(result) {
+    if (result) {
+      document.querySelector(".example5 .card-only").style.display = "none";
+      document.querySelector(
+        ".example5 .payment-request-available"
+      ).style.display =
+        "block";
+      paymentRequestElement.mount("#example5-paymentRequest");
+    }
+  });
+  
 
   registerElements([card], "example5");
 })();
