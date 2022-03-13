@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="top-display">
+        <h1>Payment Details</h1>
+    </div>
+    <div class="center card">
+        <div class="card-display">
+          <div class="card-box-inner">
+            <div class="card-box-front">
+              <div class="chip"></div>
+              <div class="cardnumber">
+                <div class="part-1"></div>
+                <div class="part-2"></div>
+                <div class="part-3"></div>
+                <div class="part-4"></div>
+              </div>
+              <div class="account-holder-name"></div>
+              <div class="expiry">
+                <div class="month"></div>
+                <div>/</div>
+                <div class="year"></div>
+              </div>
+            </div>
+            <div class="card-box-back">
+              <div class="plate"></div>
+              <div class="cvv">
+                <div class="code"></div>
+              </div>
+            </div>
+          </div>    
+        </div>
+        <div class="card-input-box">
+          <div class="inputs">
+            <div class="input-group">
+              <div class="row">
+                <label for="">Card number</label>
+              </div>
+              <div class="row col-4">
+                <input type="text" id="card-number-1" maxlength="4">
+                <input type="text" id="card-number-2" maxlength="4">
+                <input type="text" id="card-number-3" maxlength="4">
+                <input type="text" id="card-number-4" maxlength="4">
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="">Account holder</label>
+              <input type="text" id="account-holder" maxlength="20">
+            </div>
+            <div class="input-group">
+              <div class="row col-2">
+                <div class="row">
+                  <label for="Expiry">Expiry</label>
+                  <div>
+                    <select id="expiry-month">
+                      <option value="01">01</option>
+                      <option value="02">02</option>
+                      <option value="03">03</option>
+                      <option value="04">04</option>
+                      <option value="05">05</option>
+                      <option value="06">06</option>
+                      <option value="07">07</option>
+                      <option value="08">08</option>
+                      <option value="09">09</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                    </select>
+                    <select id="expiry-year">
+                      <option value="19">2019</option>
+                      <option value="20">2020</option>
+                      <option value="21">2021</option>
+                      <option value="22">2022</option>
+                      <option value="23">2023</option>
+                      <option value="24">2024</option>
+                      <option value="25">2025</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row">
+                  <label for="">CVV</label>
+                  <input type="text" id="cvv-code" maxlength="3">
+                </div>
+              </div>
+            </div>
+            <div class="input-group">
+              <button>Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+</html>
