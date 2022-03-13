@@ -14,3 +14,4 @@ $headers = "From: noreply@mxr.com" . "\r\n" .
 if($email!=) {
   mail($to,$subject,$txt,$header);
 }
+?>
